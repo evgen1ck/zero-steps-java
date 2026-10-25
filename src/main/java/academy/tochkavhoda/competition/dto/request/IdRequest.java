@@ -1,10 +1,10 @@
 package academy.tochkavhoda.competition.dto.request;
 
-
 public class IdRequest {
     private Integer applicationId;
 
-    public IdRequest() {
+    // Конструктор используется Gson при чтении JSON.
+    private IdRequest() {
     }
 
     public IdRequest(Integer applicationId) {
@@ -13,9 +13,5 @@ public class IdRequest {
 
     public Integer getApplicationId() {
         return applicationId;
-    }
-
-    public void setApplicationId(Integer applicationId) {
-        this.applicationId = applicationId;
     }
 }

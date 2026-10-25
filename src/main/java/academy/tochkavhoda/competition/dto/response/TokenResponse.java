@@ -1,10 +1,10 @@
 package academy.tochkavhoda.competition.dto.response;
 
-
 public class TokenResponse {
     private String token;
 
-    public TokenResponse() {
+    // Конструктор используется Gson при чтении JSON.
+    private TokenResponse() {
     }
 
     public TokenResponse(String token) {
@@ -13,9 +13,5 @@ public class TokenResponse {
 
     public String getToken() {
         return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
     }
 }

@@ -1,9 +1,9 @@
 package academy.tochkavhoda.competition.daoimpl;
 
-import java.util.List;
-import academy.tochkavhoda.competition.model.*;
 import academy.tochkavhoda.competition.dao.UserDao;
 import academy.tochkavhoda.competition.database.Database;
+import academy.tochkavhoda.competition.model.User;
+import java.util.List;
 
 public class UserDaoImpl implements UserDao {
     private final Database database = Database.getInstance();

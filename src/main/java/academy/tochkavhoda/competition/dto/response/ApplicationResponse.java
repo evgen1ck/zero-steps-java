@@ -12,7 +12,8 @@ public class ApplicationResponse {
     private double average;
     private int ratingCount;
 
-    public ApplicationResponse() {
+    // Конструктор используется Gson при чтении JSON.
+    private ApplicationResponse() {
     }
 
     public ApplicationResponse(int id, int participantId, String title, String description, List<String> directions, long amount, double average, int ratingCount) {
@@ -30,63 +31,31 @@ public class ApplicationResponse {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getParticipantId() {
         return participantId;
-    }
-
-    public void setParticipantId(int participantId) {
-        this.participantId = participantId;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getDescription() {
         return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public List<String> getDirections() {
         return directions;
     }
 
-    public void setDirections(List<String> directions) {
-        this.directions = directions;
-    }
-
     public long getAmount() {
         return amount;
-    }
-
-    public void setAmount(long amount) {
-        this.amount = amount;
     }
 
     public double getAverage() {
         return average;
     }
 
-    public void setAverage(double average) {
-        this.average = average;
-    }
-
     public int getRatingCount() {
         return ratingCount;
-    }
-
-    public void setRatingCount(int ratingCount) {
-        this.ratingCount = ratingCount;
     }
 }

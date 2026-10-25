@@ -1,14 +1,25 @@
 package academy.tochkavhoda.competition.service;
 
-import java.util.*;
-import academy.tochkavhoda.competition.dao.*;
-import academy.tochkavhoda.competition.daoimpl.*;
-import academy.tochkavhoda.competition.model.*;
-import academy.tochkavhoda.competition.dto.request.*;
-import academy.tochkavhoda.competition.dto.response.*;
+import academy.tochkavhoda.competition.dao.ApplicationDao;
+import academy.tochkavhoda.competition.dao.CompetitionDao;
+import academy.tochkavhoda.competition.dao.UserDao;
+import academy.tochkavhoda.competition.daoimpl.ApplicationDaoImpl;
+import academy.tochkavhoda.competition.daoimpl.CompetitionDaoImpl;
+import academy.tochkavhoda.competition.daoimpl.UserDaoImpl;
+import academy.tochkavhoda.competition.dto.response.ResultItemResponse;
+import academy.tochkavhoda.competition.dto.response.ResultsResponse;
+import academy.tochkavhoda.competition.dto.response.ServerResponse;
 import academy.tochkavhoda.competition.exception.CompetitionException;
+import academy.tochkavhoda.competition.model.Application;
+import academy.tochkavhoda.competition.model.CompetitionResult;
+import academy.tochkavhoda.competition.model.Rating;
+import academy.tochkavhoda.competition.model.ResultItem;
 import java.time.Clock;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class CompetitionService {
     private final CompetitionDao competitionDao = new CompetitionDaoImpl();

@@ -1,7 +1,6 @@
 package academy.tochkavhoda.competition.dao;
 
-import java.util.List;
-import academy.tochkavhoda.competition.model.*;
+import academy.tochkavhoda.competition.model.CompetitionResult;
 
 public interface CompetitionDao {
     void initialize();

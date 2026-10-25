@@ -1,12 +1,18 @@
 package academy.tochkavhoda.competition.service;
 
-import java.util.*;
-import academy.tochkavhoda.competition.dao.*;
-import academy.tochkavhoda.competition.daoimpl.*;
-import academy.tochkavhoda.competition.model.*;
-import academy.tochkavhoda.competition.dto.request.*;
-import academy.tochkavhoda.competition.dto.response.*;
+import academy.tochkavhoda.competition.dao.UserDao;
+import academy.tochkavhoda.competition.daoimpl.UserDaoImpl;
+import academy.tochkavhoda.competition.dto.request.ExpertRequest;
+import academy.tochkavhoda.competition.dto.request.LoginRequest;
+import academy.tochkavhoda.competition.dto.request.ParticipantRequest;
+import academy.tochkavhoda.competition.dto.response.ServerResponse;
+import academy.tochkavhoda.competition.dto.response.TokenResponse;
 import academy.tochkavhoda.competition.exception.CompetitionException;
+import academy.tochkavhoda.competition.model.Role;
+import academy.tochkavhoda.competition.model.User;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public class UserService {
     private final UserDao userDao = new UserDaoImpl();
@@ -70,7 +76,7 @@ public class UserService {
             return JsonService.ok(new TokenResponse(token));
         } catch (CompetitionException e) { return JsonService.error(e); }
     }
-    public User requireUser(String token) {
+    private User requireUser(String token) {
         User user = userDao.getUserByToken(token);
         if (user == null) { throw new CompetitionException("Недействительный токен"); }
         return user;

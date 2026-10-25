@@ -1,6 +1,5 @@
 package academy.tochkavhoda.competition.dto.request;
 
-
 public class ParticipantRequest {
     private String firstName;
     private String lastName;
@@ -8,7 +7,8 @@ public class ParticipantRequest {
     private String login;
     private String password;
 
-    public ParticipantRequest() {
+    // Конструктор используется Gson при чтении JSON.
+    private ParticipantRequest() {
     }
 
     public ParticipantRequest(String firstName, String lastName, String company, String login, String password) {
@@ -23,39 +23,19 @@ public class ParticipantRequest {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
     public String getLastName() {
         return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getCompany() {
         return company;
     }
 
-    public void setCompany(String company) {
-        this.company = company;
-    }
-
     public String getLogin() {
         return login;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
     public String getPassword() {
         return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 }

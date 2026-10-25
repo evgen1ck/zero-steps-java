@@ -1,12 +1,23 @@
 package academy.tochkavhoda.competition.service;
 
-import java.util.*;
-import academy.tochkavhoda.competition.dao.*;
-import academy.tochkavhoda.competition.daoimpl.*;
-import academy.tochkavhoda.competition.model.*;
-import academy.tochkavhoda.competition.dto.request.*;
-import academy.tochkavhoda.competition.dto.response.*;
+import academy.tochkavhoda.competition.dao.ApplicationDao;
+import academy.tochkavhoda.competition.daoimpl.ApplicationDaoImpl;
+import academy.tochkavhoda.competition.dto.request.ApplicationRequest;
+import academy.tochkavhoda.competition.dto.request.ApplicationsRequest;
+import academy.tochkavhoda.competition.dto.request.DirectionsRequest;
+import academy.tochkavhoda.competition.dto.request.IdRequest;
+import academy.tochkavhoda.competition.dto.request.RatingRequest;
+import academy.tochkavhoda.competition.dto.response.ApplicationResponse;
+import academy.tochkavhoda.competition.dto.response.ApplicationsResponse;
+import academy.tochkavhoda.competition.dto.response.IdsResponse;
+import academy.tochkavhoda.competition.dto.response.ServerResponse;
 import academy.tochkavhoda.competition.exception.CompetitionException;
+import academy.tochkavhoda.competition.model.Application;
+import academy.tochkavhoda.competition.model.Rating;
+import academy.tochkavhoda.competition.model.Role;
+import academy.tochkavhoda.competition.model.User;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ApplicationService {
     private final ApplicationDao applicationDao = new ApplicationDaoImpl();

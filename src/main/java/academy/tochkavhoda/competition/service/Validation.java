@@ -1,7 +1,9 @@
 package academy.tochkavhoda.competition.service;
 
-import java.util.*;
 import academy.tochkavhoda.competition.exception.CompetitionException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class Validation {
     public static String text(String value, String field) {

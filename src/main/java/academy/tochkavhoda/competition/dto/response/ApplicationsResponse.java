@@ -5,7 +5,8 @@ import java.util.List;
 public class ApplicationsResponse {
     private List<ApplicationResponse> applications;
 
-    public ApplicationsResponse() {
+    // Конструктор используется Gson при чтении JSON.
+    private ApplicationsResponse() {
     }
 
     public ApplicationsResponse(List<ApplicationResponse> applications) {
@@ -14,9 +15,5 @@ public class ApplicationsResponse {
 
     public List<ApplicationResponse> getApplications() {
         return applications;
-    }
-
-    public void setApplications(List<ApplicationResponse> applications) {
-        this.applications = applications;
     }
 }

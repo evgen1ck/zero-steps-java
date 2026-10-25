@@ -1,7 +1,8 @@
 package academy.tochkavhoda.competition.dao;
 
+import academy.tochkavhoda.competition.model.Application;
+import academy.tochkavhoda.competition.model.Rating;
 import java.util.List;
-import academy.tochkavhoda.competition.model.*;
 
 public interface ApplicationDao {
     int nextApplicationId();

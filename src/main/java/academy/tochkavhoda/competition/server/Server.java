@@ -1,8 +1,11 @@
 package academy.tochkavhoda.competition.server;
 
-import java.time.*;
-import academy.tochkavhoda.competition.service.*;
 import academy.tochkavhoda.competition.dto.response.ServerResponse;
+import academy.tochkavhoda.competition.service.ApplicationService;
+import academy.tochkavhoda.competition.service.CompetitionService;
+import academy.tochkavhoda.competition.service.UserService;
+import java.time.Clock;
+import java.time.Instant;
 
 public class Server {
     private final UserService userService;

@@ -1,6 +1,5 @@
 package academy.tochkavhoda.competition.model;
 
-
 public class ResultItem {
     private final int applicationId;
     private final double average;

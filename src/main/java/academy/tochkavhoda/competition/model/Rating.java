@@ -1,6 +1,5 @@
 package academy.tochkavhoda.competition.model;
 
-
 public class Rating {
     private final int expertId;
     private final int applicationId;

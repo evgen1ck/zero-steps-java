@@ -6,7 +6,8 @@ public class ResultsResponse {
     private List<ResultItemResponse> ranking;
     private long remainingFund;
 
-    public ResultsResponse() {
+    // Конструктор используется Gson при чтении JSON.
+    private ResultsResponse() {
     }
 
     public ResultsResponse(List<ResultItemResponse> ranking, long remainingFund) {
@@ -18,15 +19,7 @@ public class ResultsResponse {
         return ranking;
     }
 
-    public void setRanking(List<ResultItemResponse> ranking) {
-        this.ranking = ranking;
-    }
-
     public long getRemainingFund() {
         return remainingFund;
-    }
-
-    public void setRemainingFund(long remainingFund) {
-        this.remainingFund = remainingFund;
     }
 }

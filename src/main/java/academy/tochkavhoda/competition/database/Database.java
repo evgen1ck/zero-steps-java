@@ -1,7 +1,15 @@
 package academy.tochkavhoda.competition.database;
 
-import java.util.*;
-import academy.tochkavhoda.competition.model.*;
+import academy.tochkavhoda.competition.model.Application;
+import academy.tochkavhoda.competition.model.CompetitionResult;
+import academy.tochkavhoda.competition.model.Rating;
+import academy.tochkavhoda.competition.model.User;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Database {
     private static final Database INSTANCE = new Database();

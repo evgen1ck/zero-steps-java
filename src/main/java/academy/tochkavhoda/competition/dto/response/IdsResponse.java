@@ -5,7 +5,8 @@ import java.util.List;
 public class IdsResponse {
     private List<Integer> applicationIds;
 
-    public IdsResponse() {
+    // Конструктор используется Gson при чтении JSON.
+    private IdsResponse() {
     }
 
     public IdsResponse(List<Integer> applicationIds) {
@@ -14,9 +15,5 @@ public class IdsResponse {
 
     public List<Integer> getApplicationIds() {
         return applicationIds;
-    }
-
-    public void setApplicationIds(List<Integer> applicationIds) {
-        this.applicationIds = applicationIds;
     }
 }

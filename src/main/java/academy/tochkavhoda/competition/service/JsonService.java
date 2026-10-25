@@ -1,8 +1,13 @@
 package academy.tochkavhoda.competition.service;
 
-import com.google.gson.*;
-import academy.tochkavhoda.competition.dto.response.*;
+import academy.tochkavhoda.competition.dto.response.ErrorResponse;
+import academy.tochkavhoda.competition.dto.response.ServerResponse;
 import academy.tochkavhoda.competition.exception.CompetitionException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.Strictness;
 
 public class JsonService {
     private static final Gson GSON = new GsonBuilder().setStrictness(Strictness.STRICT).create();

@@ -1,13 +1,13 @@
 package academy.tochkavhoda.competition.dto.response;
 
-
 public class ResultItemResponse {
     private int applicationId;
     private double average;
     private long amount;
     private boolean funded;
 
-    public ResultItemResponse() {
+    // Конструктор используется Gson при чтении JSON.
+    private ResultItemResponse() {
     }
 
     public ResultItemResponse(int applicationId, double average, long amount, boolean funded) {
@@ -21,31 +21,15 @@ public class ResultItemResponse {
         return applicationId;
     }
 
-    public void setApplicationId(int applicationId) {
-        this.applicationId = applicationId;
-    }
-
     public double getAverage() {
         return average;
-    }
-
-    public void setAverage(double average) {
-        this.average = average;
     }
 
     public long getAmount() {
         return amount;
     }
 
-    public void setAmount(long amount) {
-        this.amount = amount;
-    }
-
     public boolean getFunded() {
         return funded;
-    }
-
-    public void setFunded(boolean funded) {
-        this.funded = funded;
     }
 }
